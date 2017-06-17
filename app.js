@@ -14,6 +14,10 @@ angular.module('IwN').config(function ($stateProvider, $urlRouterProvider) {
         url: '/home',
         templateUrl: 'home/home.html'
     });
+    $stateProvider.state('categoria', {
+        url: '/home/:categoria',
+        templateUrl: 'categoria/categoria.html'
+    });
     /* Add New States Above */
     $urlRouterProvider.otherwise('/home');
 
