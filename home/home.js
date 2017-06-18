@@ -1,14 +1,11 @@
-angular.module('IwN').controller('HomeCtrl',function($scope,$location){
+angular.module('IwN').controller('HomeCtrl',function($scope,$firebaseArray){
    
-    $scope.categories = [
-        'business',
-        'sports',
-        'entertainment'
-    ];
-
-    $scope.setCategory = function() {
+   var ref = firebase.database().ref();
+   var list = $firebaseArray(ref);
+   $scope.list = list;
+  /*    $scope.setCategory = function() {
         console.log("Set category to: "+$scope.selectedCategory)
 		$location.path('/home/'+$scope.selectedCategory);
-    }
+    } */
 
 });
