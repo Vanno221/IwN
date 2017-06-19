@@ -7,9 +7,11 @@
 						<h3 class="panel-title">Categorie:</h3>
 					</div>
 					<div class="panel-body">
-					
-						<li ng-repeat="item in list | filter:name">{{ item | json }}</li>
-
+						<div class="list-group">
+							<button type="button" class="list-group-item" ng-class="hasSelect(item.Id)" 
+								ng-repeat="item in list | filter:name" ng-click="selectCategoria(item.Id)">{{item.Nome}}</div>
+						</div>
+						<button class="btn btn-default" ng-click="saveCategorie()">Salva</button>
 					</div>
 				</div>
 			</div>
