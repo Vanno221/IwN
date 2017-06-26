@@ -38,7 +38,7 @@ angular.module('IwN').controller('NewsCtrl', function ($scope, newsFactory, $fir
 			for (var i = 0; i < res.length; i++) { // ciclo le configurazioni
 				console.debug(res[i]);
 
-				if(res[i].idUtente == IdAuth) {
+				if(res[i].IdUtente == IdAuth) {
 					$scope.rssUtente = res[i]; // qui hai l'oggetto che si trova sul db di firebase
 					return;
 				}
@@ -56,7 +56,7 @@ angular.module('IwN').controller('NewsCtrl', function ($scope, newsFactory, $fir
 
 				// restituisce rss
 				return newsFactory
-					.getNews($scope.category)
+					.getNews($scope.rssUrls[i].Url)
 					.success(function (data, status, headers, config) {
 						console.log("SUCCESS", data.query.results.item);
 						return data.query.results.item;
