@@ -9,7 +9,7 @@
 <navbar>
   <div ng-include="'partial/menu/menu.html'" ng-controller="MenuCtrl"></div> 
 </navbar>
-<body background="immagini/sfondo.jpg">
+<body>
 
   <!-- Livereload script for development only (stripped during dist build) -->
   <script src="http://localhost:35729/livereload.js" data-concat="false"></script>
@@ -27,6 +27,7 @@
   <script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
   <script src="bower_components/angularfire/dist/angularfire.js"></script>
   <script src="bower_components/firebase/firebase.js"></script>
+  <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
   <!-- Add New Bower Component JS Above -->
 
 
@@ -38,6 +39,8 @@
   <script src="partial/categoria/categoria.js"></script>
   <script src="partial/news/news.js"></script>
   <script src="partial/menu/menu.js"></script>
+  <script src="partial/news-category/news-category.js"></script>
+  <script src="partial/modal/read-news/read-news.js"></script>
   <script src="service/newsFactory.js"></script>
   <!-- Add New Component JS Above -->
 

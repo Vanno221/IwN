@@ -1,0 +1,12 @@
+<div>
+	<div class="modal-header">
+		<button type="button" class="close pull-right" ng-click="$dismiss()" aria-hidden="true">&times;</button>
+		<h4 class="modal-title">{{newsHtml.title}}</h4>
+	</div>
+	<div class="modal-body">
+		<p ng-bind-html="newsHtml.description"></p>
+	</div>
+	<div class="modal-footer">
+		<button class="btn btn-default" ng-click="$dismiss()">Chiudi</button>
+	</div>
+</div>

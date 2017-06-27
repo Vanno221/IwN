@@ -1,4 +1,4 @@
-angular.module('IwN', ['ui.bootstrap', 'ui.router', 'ngAnimate', 'firebase']);
+angular.module('IwN', ['ui.bootstrap', 'ui.router', 'ngAnimate', 'firebase', 'ngSanitize']);
 
 angular.module('IwN').config(function ($stateProvider, $urlRouterProvider) {
 
@@ -21,6 +21,10 @@ angular.module('IwN').config(function ($stateProvider, $urlRouterProvider) {
     $stateProvider.state('news', {
         url: '/news',
         templateUrl: 'partial/news/news.html'
+    });
+    $stateProvider.state('news-category', {
+        url: '/news-category/:id',
+        templateUrl: 'partial/news-category/news-category.html'
     });
     /* Add New States Above */
     $urlRouterProvider.otherwise('/home');

@@ -21,6 +21,7 @@
     "moment": "~2.12",
     "less.js": "~2.6",
     "font-awesome": "~4.5",
-    "angularfire": "^2.3.0"
+    "angularfire": "^2.3.0",
+    "angular-sanitize": "^1.6.4"
   }
 }

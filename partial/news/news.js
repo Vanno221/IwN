@@ -27,13 +27,6 @@ angular.module('IwN').controller('NewsCtrl', function ($scope, newsFactory, $fir
 		var listUrls = $firebaseArray(refUrls);
 		$scope.rssUrls = listUrls;
 
-
-		// angular.forEach(list, function(value, key2) { // molto probabilmente non funziona questo, provalo comunque
-		// 	if (idUtente === value.IdAuth) {
-		// 		// non se sa va bene 
-		// 	}
-   		// });
-
 		list.$loaded(function (res) { // carica tutte le configurazioni
 			for (var i = 0; i < res.length; i++) { // ciclo le configurazioni
 				console.debug(res[i]);
@@ -55,15 +48,10 @@ angular.module('IwN').controller('NewsCtrl', function ($scope, newsFactory, $fir
 			if($scope.rssUrls[i].Id == url) {
 
 				// restituisce rss
-				return newsFactory
-					.getNews($scope.rssUrls[i].Url)
-					.success(function (data, status, headers, config) {
-						console.log("SUCCESS", data.query.results.item);
-						return data.query.results.item;
-					});
+				return $scope.rssUrls[i];
 			}
 		}
 
 		return null;
-	}
+	};
 });
